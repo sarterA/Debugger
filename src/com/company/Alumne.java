@@ -1,17 +1,21 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Random;
 
-public class Alumne {
+public class Alumne extends ArrayList<Alumne> {
 
     private String nom;
     private int edat;
-    private int [] notes;
+    private int[] notes;
 
-    public Alumne(String nom, int edat, int [] notes) {
+
+    public Alumne(String nom, int edat, int[] notes) {
         this.nom = nom;
         this.edat = edat;
         this.notes = notes;
+
+
     }
 
     public Alumne(){}
@@ -43,19 +47,17 @@ public class Alumne {
         this.edat = edat;
     }
 
-    public void setNotes(int[] notes) {
-        this.notes = notes;
-    }
+    public void setNotes(int[] notes){ this.notes = notes;}
 
-    public String getNom() {
-        return nom;
-    }
+    public String getNom() { return this.nom;}
 
     public int getEdat() {
-        return edat;
+        return this.edat;
     }
 
     public int[] getNotes() {
-        return notes;
+        return this.notes;
     }
+
+
 }

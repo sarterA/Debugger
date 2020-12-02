@@ -5,7 +5,9 @@ import java.util.ArrayList;
 public class Assignatura {
 
     private String nom;
-    private ArrayList<Alumne> alumnes;
+
+    private ArrayList<Alumne> alumnes = new ArrayList<Alumne>();
+
 
     public Assignatura(String nom, ArrayList<Alumne> alumnes) {
         this.nom = nom;
@@ -24,7 +26,8 @@ public class Assignatura {
     }
 
     public Alumne millorAlumne() {
-        Alumne alumne = new Alumne();
+//El error estaba en esta linea que era: Alumne alumne = new alumne(); y habia que declarar el constructor.
+        Alumne alumne = new Alumne("", 0 , new int[]{} );
         for (int i = 0; i < alumnes.size(); i++) {
             if (alumne.mitjanaNotes() > alumnes.get(i).mitjanaNotes()) {
                 alumne = alumnes.get(i);
@@ -32,6 +35,7 @@ public class Assignatura {
         }
         return alumne;
     }
+
 
     public void setNom(String nom) {
         this.nom = nom;

@@ -5,8 +5,9 @@ import java.util.Random;
 
 public class Main {
 
-    private static final int NUM_NOTES = 10;
-    private static final int NUM_ALUMNES = 2;
+    // la palabra final y static estaban invertidos en posicion.
+    private final static int NUM_NOTES = 10;
+    private final static int NUM_ALUMNES = 2;
 
     public static void main(String[] args) {
 
